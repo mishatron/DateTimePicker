@@ -1,6 +1,7 @@
 package datetime.lib.mishatronic.datetimepicker
 
 import android.graphics.drawable.Drawable
+import java.util.*
 
 
 /**
@@ -8,6 +9,7 @@ import android.graphics.drawable.Drawable
  */
 class DialogParams{
     var time: Long? = null
+    var timeZone: TimeZone? = null
     var buttonTitle:String? = null
     var buttonBackround:Drawable? = null
     var is24hour:Boolean = true

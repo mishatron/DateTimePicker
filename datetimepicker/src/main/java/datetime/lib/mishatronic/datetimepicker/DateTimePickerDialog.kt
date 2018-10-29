@@ -38,6 +38,10 @@ private constructor(
             cal.timeInMillis = it
             setTime()
         }
+        params.timeZone?.let {
+            cal.timeZone = it
+            setTime()
+        }
         params.buttonTitle?.let {
             date_time_set?.text = it
         }
@@ -143,6 +147,15 @@ private constructor(
          */
         fun setTime(time: Long): Builder {
             this.dialogParams.time = TimeUnit.SECONDS.toMillis(time)
+            return this
+        }
+
+        /**
+         * set timeZone for picker
+         * @param timeZone
+         */
+        fun setTimeZone(timeZone: TimeZone): Builder {
+            this.dialogParams.timeZone = timeZone
             return this
         }
 
