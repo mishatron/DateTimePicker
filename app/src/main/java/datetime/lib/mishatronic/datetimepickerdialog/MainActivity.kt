@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         DateTimePickerDialog.Builder(this)
-                .setOnOkListener { Toast.makeText(this, "ok", Toast.LENGTH_SHORT).show() }
-                .setButtonTitle("okay")
+                .setOnOkListener { Toast.makeText(this, "Selected time is $it", Toast.LENGTH_SHORT).show() }
+                .setButtonTitle("Ok")
                 .setBackgroundColor(Color.GREEN)
                 .setButtonBackgroundColor(Color.BLUE)
                 .build().show()

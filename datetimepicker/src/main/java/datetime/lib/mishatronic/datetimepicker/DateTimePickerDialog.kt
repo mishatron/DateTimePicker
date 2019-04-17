@@ -48,7 +48,7 @@ private constructor(
         params.background?.let {
             layout_back?.background = it
         }
-        params.buttonBackround?.let {
+        params.buttonBackground?.let {
             date_time_set?.background = it
         }
     }
@@ -136,7 +136,10 @@ private constructor(
     }
 
 
-
+    /**
+     * Class for building DateTimePickerDialog
+     * @param context
+     */
     class Builder(private val context: Context) {
         private var onOk: (Long) -> Unit = {}
         private var dialogParams = DialogParams()
@@ -190,7 +193,7 @@ private constructor(
          * @param resId
          */
         fun setButtonBackground(@DrawableRes resId: Int): Builder {
-            this.dialogParams.buttonBackround = ContextCompat.getDrawable(context, resId)
+            this.dialogParams.buttonBackground = ContextCompat.getDrawable(context, resId)
             return this
         }
         /**
@@ -198,7 +201,7 @@ private constructor(
          * @param d
          */
         fun setButtonBackground(d: Drawable): Builder {
-            this.dialogParams.buttonBackround = d
+            this.dialogParams.buttonBackground = d
             return this
         }
         /**
